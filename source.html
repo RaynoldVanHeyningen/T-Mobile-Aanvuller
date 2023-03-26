@@ -1,0 +1,912 @@
+<html class="no-js no-touch" lang="nl"><head>
+    <meta charset="utf-8">
+    <meta name="description" content="roaming">
+    <meta name="keywords">
+    <meta name="gsasection" content="Other">
+    <meta name="gsacategory" content="Other">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+    <meta name="osn" content="p1n8">
+    <meta name="layout" content="New">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><script src="https://js-agent.newrelic.com/nr-1216.min.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"49ecee70e8","applicationID":"48732199","transactionName":"MwAAZEcFXkRUVkddXwpKMkVXCFlUZVpBQFEISjBfVAlZWVJxUkBRSjcNUVgNXlBxVEdVYBEXAVhUF1UYcVBVVUUIEQ==","queueTime":0,"applicationTime":456,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={xpid:"UQIAVFJSGwcIU1JQBggO",licenseKey:"49ecee70e8",applicationID:"48732199"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(27),s={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,i.indexOf("dev")!==-1&&(s.dev=!0),i.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&o.on("internal-error",function(t){r(t.stack)}),s.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{p?p-=1:i(s||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:c.now();o("err",[t,n])}var o=t("handle"),a=t(28),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError";if(!c.disabled){var p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(10),t(9),"addEventListener"in window&&t(6),c.xhrWrappable&&t(11),d=!0)}s.on("fn-start",function(t,e,n){d&&(p+=1)}),s.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){o("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(v,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function i(t){if(s(v,[window.performance.getEntriesByType(w)]),window.performance["c"+l])try{window.performance[h](m,i,!1)}catch(t){}else try{window.performance[h]("webkit"+m,i,!1)}catch(t){}}function o(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(10),f=t(9),u=t(5),d=t(19),l="learResourceTimings",p="addEventListener",h="removeEventListener",m="resourcetimingbufferfull",v="bstResource",w="resource",g="-start",y="-end",x="fn"+g,b="fn"+y,E="bstTimer",R="pushState",S=t("loader");if(!S.disabled){S.features.stn=!0,t(8),"addEventListener"in window&&t(6);var O=NREUM.o.EV;a.on(x,function(t,e){var n=t[0];n instanceof O&&(this.bstStart=S.now())}),a.on(b,function(t,e){var n=t[0];n instanceof O&&s("bst",[n,e,this.bstStart,S.now()])}),c.on(x,function(t,e,n){this.bstStart=S.now(),this.bstType=n}),c.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),this.bstType])}),f.on(x,function(){this.bstStart=S.now()}),f.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),"requestAnimationFrame"])}),a.on(R+g,function(t){this.time=S.now(),this.startPath=location.pathname+location.hash}),a.on(R+y,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(v,[window.performance.getEntriesByType("resource")]),r()):p in window.performance&&(window.performance["c"+l]?window.performance[p](m,i,d(!1)):window.performance[p]("webkit"+m,i,d(!1))),document[p]("scroll",o,d(!1)),document[p]("keypress",o,d(!1)),document[p]("click",o,d(!1))}}},{}],5:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){s.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return i.emit(n+"start",[t,a],s),s.then(function(t){return i.emit(n+"end",[null,t],s),t},function(t){throw i.emit(n+"end",[t],s),t})})}var i=t("ee").get("fetch"),o=t(28),a=t(27);e.exports=i;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(s,"fetch",c),i.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(c+"done",[null,e],n)}else i.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],10:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(c+u,r),o.on(s+u,i)},{}],11:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function o(t){x.push(t),m&&(E?E.then(a):w?w(a):(R=-R,S.data=R))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=t(19),p=NREUM.o,h=p.XHR,m=p.MO,v=p.PR,w=p.SI,g="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(g,i,l(!1))}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(h,b),b.prototype=h.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),m){var E=v&&v.resolve();if(!w&&!v){var R=1,S=document.createTextNode(R);new m(a).observe(S,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===g||a()})},{}],12:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&l())&&(w.traceContextParentHeader=i(h,m),w.traceContextStateHeader=o(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",s=1,c="",f="";return i+"@nr="+o+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(s.d.tk=o),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(24),h=t(14);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],13:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);return e.protocol&&"data"===e.protocol?void g("Ajax/DataUrl/Excluded"):void(e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this)))}}function i(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function o(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(14),f=t(12).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(20),m=t(18),v=t(15),w=t(19),g=t(21).recordSupportability,y=NREUM.o.REQ,x=window.XMLHttpRequest;a.features.xhr=!0,t(11),t(7),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){o(e,t)},w(!1)),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},w(!1))}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<l;s++)e.addEventListener(d[s],this.listener,w(!1))}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof x&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},o=this.target;if("string"==typeof o?n=o:"object"==typeof o&&o instanceof y?n=o.url:window.URL&&"object"==typeof o&&o instanceof URL&&(n=o.href),i(this,n),"data"!==this.params.protocol){var s=(""+(o&&o instanceof y&&o.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}}),u.on("fetch-done",function(t,e){if(this.endTime=a.now(),this.params||(this.params={}),"data"===this.params.protocol)return void g("Ajax/DataUrl/Excluded");this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],14:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];if(0===(t||"").indexOf("data:"))return{protocol:"data"};var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||s),"/"===i.pathname&&(r[t]=i),i}},{}],15:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(18);e.exports=r},{}],16:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return u.recordSupportability("API/"+e+"/called"),o(t+e,[f.now()].concat(s(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(27),s=t(28),c=t("ee").get("tracer"),f=t("loader"),u=t(21),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var l=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(l,function(t,e){d[e]=i(p,e,!0,"api")}),d.addPageAction=i(p,"addPageAction",!0),d.setCurrentRouteName=i(p,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(h+"tracer",[f.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(h,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),u.recordSupportability("API/noticeError/called"),o("err",[t,f.now(),!1,e])}},{}],17:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],20:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],21:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[s,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",s="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:s},recordSupportability:r,recordCustom:i}},{}],22:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,s=t(29);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],23:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;var i=[r],o=a({});o&&i.push(o),p("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function s(t){if(t instanceof w&&!y){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=h.now()?n.fid=h.now()-e:e>h.offset&&e<=Date.now()?(e-=h.offset,n.fid=h.now()-e):e=h.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=h.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,d,l,p=t("handle"),h=t("loader"),m=t(26),v=t(19),w=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(g){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(g){}l=new PerformanceObserver(o);try{l.observe({type:"layout-shift",buffered:!0})}catch(g){}}if("addEventListener"in document){var y=!1,x=["click","keydown","mousedown","pointerdown","touchstart"];x.forEach(function(t){document.addEventListener(t,s,v(!1))})}m(c)}},{}],24:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<o.length;s++)i=o[s],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(t)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],25:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],26:[function(t,e,n){function r(t){function e(){t(s&&document[s]?document[s]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(19);e.exports=r;var o,a,s;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",s="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",s="webkitVisibilityState")},{}],27:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],28:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],29:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var s=e(i),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var l=d[y[n]];return l&&l.push([x,n,r,s]),s}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return l[t]=l[t]||i(n)}function w(t,e){p.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function o(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var c="nr@context",f=t("gos"),u=t(27),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!O++){var t=S.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+S.offset],null,"api"),s("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=p+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){s("mark",["domContent",a()+S.offset],null,"api")}var a=t(22),s=t("handle"),c=t(27),f=t("ee"),u=t(25),d=t(17),l=t(19),p=d.getConfiguration("ssl")===!1?"http":"https",h=window,m=h.document,v="addEventListener",w="attachEvent",g=h.XMLHttpRequest,y=g&&g.prototype,x=!1;NREUM.o={ST:setTimeout,SI:h.setImmediate,CT:clearTimeout,XHR:g,REQ:h.Request,EV:h.Event,PR:h.Promise,MO:h.MutationObserver};var b=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},R=g&&y&&y[v]&&!/CriOS/.test(navigator.userAgent),S=e.exports={offset:a.getLastTimestamp(),now:a,origin:b,features:{},xhrWrappable:R,userAgent:u,disabled:x};if(!x){t(16),t(23),m[v]?(m[v]("DOMContentLoaded",o,l(!1)),h[v]("load",r,l(!1))):(m[w]("onreadystatechange",i),h[w]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var O=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,c],u],t)}s(n+"start",[o,a,c],u,f);try{return l=e.apply(a,o)}catch(h){throw s(n+"err",[o,a,h],u,f),h}finally{s(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,i,c,o))}function s(n,r,o,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function s(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(28),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,13,4,3]);</script>
+    <meta property="fb:page_id" content="155526387811390">
+    <meta property="og:image" content="//www.t-mobile.nl/global/media/images/facebook/og-image.png">
+    <meta property="og:image:secure_url" content="//www.t-mobile.nl/global/media/images/facebook/og-image.png">
+    <title>Internet in het buitenland | T-Mobile</title>
+    <link rel="shortcut icon" href="/Assets/Icons/favicon.ico">
+    <link rel="publisher" href="//plus.google.com/111625733935883398395">
+    <link rel="apple-touch-icon" sizes="57x57" href="/Assets/Icons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/Assets/Icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/Assets/Icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/Assets/Icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/Assets/Icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/Assets/Icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/Assets/Icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/Assets/Icons/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="/Assets/Icons/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="/Assets/Icons/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/Assets/Icons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/Assets/Icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/Assets/Icons/favicon-16x16.png" sizes="16x16">
+    <link rel="canonical" href="https://www.t-mobile.nl/roamingstatus">
+    <meta name="msapplication-TileColor" content="#e20074">
+    <meta name="msapplication-TileImage" content="/Assets/Icons/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="/Assets/Icons/mstile-70x70.png">
+    <meta name="msapplication-square144x144logo" content="/Assets/Icons/mstile-144x144.png">
+    <meta name="msapplication-square150x150logo" content="/Assets/Icons/mstile-150x150.png">
+    <meta name="msapplication-square310x310logo" content="/Assets/Icons/mstile-310x310.png">
+    <meta name="msapplication-wide310x150logo" content="/Assets/Icons/mstile-310x150.png">
+    <link href="/Assets/StyleSheets/Static/DesignSystem?v=Zw3F0n75McOxc3XKAGIfZCuHzRTUkeUkquZBVCp3a6A1" rel="stylesheet">
+
+    <style>
+        .form-textfield.input-validation-error {
+            border-color: #d90000;
+        }
+
+        .form-textfield.valid {
+            border-color: #21b277;
+        }
+
+        .field-validation-error {
+            display: block;
+            margin-top: .25rem;
+            color: #d90000;
+        }
+
+        /* .field-validation-valid { } */
+
+        .validation-summary-errors {
+            border-color: #d90000;
+            color: #d90000;
+        }
+
+        /* .validation-summary-valid { } */
+    </style>
+    
+
+        <style>
+        .profile {
+            background: rgb(255,204,54);
+            background: linear-gradient(135deg, rgba(255,204,54,1) 0%, rgba(255,159,25,1) 100%);
+            color: #fff;
+            font-weight: 700;
+            min-height: 40px;
+            padding: 20px;
+            position: relative;
+            text-align: center;
+        }
+
+            .profile:before {
+                background-image: linear-gradient(45deg, rgba(0,0,0,0.10) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.10) 50%, rgba(0,0,0,0.10) 75%, transparent 75%, transparent 100%);
+                background-size: 40px 40px;
+                content: "";
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: 0;
+            }
+
+        .profile-text {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+
+        <style>
+            .afm-banner ~ .navbar-search-autocomplete .autocomplete-scroll {
+                max-height: calc(100vh - 140px);
+            }
+
+            @media screen and (min-width: 1024px) {
+                .afm-banner ~ .navbar-search-autocomplete .autocomplete-scroll {
+                    max-height: calc(100vh - 179px);
+                }
+            }
+        </style>
+
+    
+
+
+
+    <meta name="google-site-verification" content="KsXIia1OniGO5zRZABCV-AFksSvZmmlVDyekoIrIoWo">
+    <meta name="facebook-domain-verification" content="awnppohnze5yql4as60ybouwxua2q9">
+</head>
+
+<body class="modal-open has-navbar-sticky has-navbar-meta">
+    <div class="modal show koekje" id="koekjePopup" tabindex="-1" role="dialog" aria-labelledby="Row1_Column1_Cell1_CookieSettings_Optimalkoekje" aria-hidden="false" data-modal="{&quot;closable&quot;: false}" style="padding-right: 16px; visibility: visible;">
+        <div class="modal-dialog koekje-dialog modal-large">
+<form action="/roamingstatus" method="post" novalidate="novalidate"><input name="__UniqueContentId" type="hidden" value="/row1/column1/cell1/General/htblocks/wc902_application_dotnet/default/CookieSettings"><input name="__BindingPrefix" type="hidden" value="Row1.Column1.Cell1.CookieSettings">                <div class="modal-content modal-dialog koekje-content">
+                    <div class="modal-header koekje-header">
+                        <h3 class="modal-title" id="Row1_Column1_Cell1_CookieSettings_Optimalkoekje">Wil je onze optimale cookies accepteren?</h3>
+                    </div>
+                    <div class="ie10-ie11-flexfix">
+                        <div class="modal-body koekje-body p-3" style="overflow-y: auto; overflow-x: hidden;">
+                            <div class="row mb-3">
+                                <div class="column-12">
+                                    <p>
+                                        We willen jouw toestemming vragen om optimale cookies te gebruiken om T-Mobile.nl, Tele2.nl en Ben.nl voor jou relevanter te maken. Als je kiest voor optimale cookies ervaar je onze websites zo optimaal mogelijk, met bijvoorbeeld advertenties die helemaal op jou zijn afgestemd. Je geeft ons ook toestemming om jouw internetgedrag binnen, en mogelijk ook buiten, onze websites te volgen. Met deze informatie passen wij en derde partijen de websites, onze communicatie en advertenties aan op jouw interesses en profiel.
+                                    </p>
+                                    <p>
+                                        Om de optimale cookies te plaatsen klik je hieronder op 'Ja, optimale cookies accepteren'. Voor meer informatie of het aanpassen van je cookie instellingen, <a href="/cookies" id="trap-focus-first">kun je hier terecht</a>. Op die pagina kun je jouw keuze altijd weer wijzigen.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer koekje-footer">
+                        <div class="column-12 koekje-footer-container" aria-labelledby="Row1_Column1_Cell1_CookieSettings_Optimalkoekje">
+                            <input type="hidden" id="Row1_Column1_Cell1_CookieSettings_SelectedCookieType" name="Row1.Column1.Cell1.CookieSettings.SelectedCookieType">
+                            <button id="Row1_Column1_Cell1_CookieSettings_AdvancedSaveAccept" name="Row1.Column1.Cell1.CookieSettings.AdvancedSave" class="button-primary button-small mr-tablet-2 flex mx-auto mb-2 mb-tablet-0 ml-tablet-0" tabindex="0" data-interaction-id="koekje-settings-save-button" type="submit">
+                                Ja, optimale cookies accepteren
+                            </button>
+                            <button id="Row1_Column1_Cell1_CookieSettings_AdvancedSaveCancel" name="Row1.Column1.Cell1.CookieSettings.AdvancedSave" class="button-outline-primary button-small flex mx-auto mb-2 mb-tablet-0 ml-tablet-0" tabindex="0" data-interaction-id="koekje-settings-cancel-button" type="submit">
+                                Nee, ik wil geen optimale ervaring
+                            </button>
+                            <p>
+                                <a href="/cookies" target="_blank" rel="noopener noreferrer" id="trap-focus-last">Cookiebeleid</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+</form>        </div>
+    </div>
+    <div class="modal-backdrop show"></div>
+    <style>
+        .koekje-footer-container {
+            padding: 0px;
+        }
+
+        .koekje-footer .button-outline-primary:hover {
+            background-image: none;
+            background-color: transparent;
+            -webkit-box-shadow: inset 0 -2px 0 0 #e20074, inset 0 2px 0 0 #e20074, inset -2px 0 0 0 #e20074, inset 2px 0 0 0 #e20074;
+            box-shadow: inset 0 -2px 0 0 #e20074, inset 0 2px 0 0 #e20074, inset -2px 0 0 0 #e20074, inset 2px 0 0 0 #e20074;
+            color: #e20074;
+        }
+
+        .koekje-footer .button-primary:hover {
+            background-color: #e20074;
+            color: #fff;
+        }
+
+        .koekje {
+            padding-right: 0 !important;
+        }
+
+        .koekje-dialog {
+            overflow: visible !important;
+            max-height: unset !important;
+        }
+
+        .koekje-content {
+            max-height: unset !important;
+        }
+
+        .koekje-body {
+            background-color: #fff;
+        }
+
+        .koekje-dialog input {
+            display: none;
+        }
+
+        .koekje-footer p {
+            text-align: center;
+            margin: 0px;
+        }
+
+        .koekje-footer > .column-12 > div, .koekje-footer > .column-12 > p {
+            display: block;
+        }
+
+        .koekje-footer > .column-12 > p {
+            margin-left: auto !important;
+        }
+
+        .koekje-footer label {
+            display: block;
+        }
+
+        .koekje .koekje-footer {
+            height: auto;
+            padding: 15px;
+            min-height: auto;
+        }
+
+        @media (min-width: 768px) {
+
+            .modal-dialog:not(.modal-dialog-drawer):not(.modal-expanded) {
+                max-width: 696px;
+            }
+
+            .modal-dialog {
+                max-width: 696px;
+            }
+
+            .koekje-content {
+                width: 696px;
+            }
+
+            .koekje-footer > .column-12 > div, .koekje-footer > .column-12 > p {
+                display: inline-block;
+            }
+
+            .koekje-footer-container {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+            }
+
+            .koekje-footer > .column-12 > div {
+                margin-right: 10px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .koekje-dialog label {
+                margin-bottom: 10px;
+            }
+
+            .koekje .koekje-header {
+                height: 80px;
+            }
+        }
+    </style>
+
+    <script>
+        dataLayer = [{"Request":{"Environment":"prod","Login":"network authenticatie","Platform":"www.t-mobile.nl","MainSection":"t-mobile","ServerTimestamp":"2023-03-20 09:28:10,624","SiteSection":"Consumer","Url":"https://www.t-mobile.nl/roamingstatus","UrlPath":"/roamingstatus","UrlHostname":"www.t-mobile.nl","PageName":"consumer:my:redesign:roaming:roamingstatus","UserSelectedCookieType":"None","ContentTrace":"se1ro1co1ce1-18384085","BSID":"rv7ItT/gvXZQIq4y5/yH5qLHDkXsmrrIIcbBOfqMILI=","PSB":"NOREC","PersonalizedContent":[{"CellLocation":"se1ro1co1ce1","CellContent":"14393625","Description":"roamingstatus"}],"Internal":false},"Customer":{"CustomerNumber":"1.21696845","CustomerType":"zakelijk","Msisdn":"097032380955","LCSA":"UNK","Gender":"f","SubscriptionType":"postpaid","BirthDate":"1991-08-01","BirthDateShort":"1991","Products":[],"AverageInvoiceAmount":"","AppToken":false,"CurrentSubscriptionType":"simonly","HasMultiSubscriptionEligibleForRenewal":false,"Subscriptions":[{"CustomerType":"zakelijk","Msisdn":"097032380955","SubscriptionType":"postpaid","AverageInvoiceAmount":"","AppToken":false,"CurrentSubscriptionType":"simonly"}],"IsFixedSelected":false,"IsTwoFactorAuthDisabled":false,"TwoFactorAuthPromoteCount":0,"HasSeenTwoFactorAuthPromotion":false}}];
+            </script>
+    <!-- End Siteimprove Analytics -->
+    
+    
+
+<!--googleoff: index-->
+
+
+
+
+
+
+
+    <header class="navbar " data-navbar="{ sticky: true }">
+        <a href="#se1" class="navbar-skip-link" data-skip-link="">Spring naar inhoud</a>
+                <div class="navbar-meta" data-navbar-meta="">
+                    <div class="navbar-container">
+                        <ul class="navbar-meta-links">
+                                <li class="text-truncate is-active" itemprop="name"><a itemprop="url" href="/">Privé</a></li>
+                                <li class="text-truncate" itemprop="name"><a itemprop="url" data-analytics-click="{'event':'gaEvent','gaEvent':{'category':'hoofdnavigatie_zakelijk_toggle','action':'click','label':'Zakelijk | /zakelijk'}}" href="/zakelijk">Zakelijk</a></li>
+                        </ul>
+                    </div>
+                </div>
+        <div class="navbar-container">
+                <a class="navbar-logo" href="/" title="Terug naar de homepage"></a>
+
+
+
+<input id="navbar-menu-state" class="navbar-menu-state" type="checkbox" data-navbar-menu-toggle="" data-analytics-click-once="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Menu Toggle&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Menu Toggle&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive&quot;}}" autocomplete="off">
+<nav class="navbar-menu navbar-menu-fixed" role="navigation">
+    <ul itemscope="" itemtype="http://www.schema.org/SiteNavigationElement" class="navbar-menu-list" data-navbar-menu="">
+            <li itemprop="name" class="is-primary-item hidden-tablet-up"><a class="navbar-link" data-navbar-menu-item="" itemprop="url" href="/">Home</a></li>
+                    <li itemprop="name" class=" is-primary-item" data-navbar-menu-dropdown="">
+                <a class="navbar-link" data-navbar-menu-item="" itemprop="url" href="/shop" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Mobiel | /shop&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Mobiel | /shop&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive&quot;}}">Mobiel</a>
+                    <div class="navbar-menu-sub">
+                        <button class="navbar-menu-sub-back" data-navbar-menu-back="">Mobiel</button>
+                        <div class="navbar-menu-sub-container">
+                            <div class="row no-gutters">
+                                        <div class="navbar-menu-sub-column column-12 column-desktop-auto">
+                                            <span class="navbar-menu-sub-heading">
+                                                <a href="/shop/alle-telefoons" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Shop | /shop/alle-telefoons&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Shop | /shop/alle-telefoons&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;}}">Shop</a>
+                                            </span>
+                                            <ul class="navbar-menu-sub-list">
+                                                    <li><a href="/shop/alle-telefoons" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Alle telefoons | /shop/alle-telefoons&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Alle telefoons | /shop/alle-telefoons&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Alle telefoons</a></li>
+                                                    <li><a href="/mobiel-abonnement/sim-only" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Sim Only | /mobiel-abonnement/sim-only&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Sim Only | /mobiel-abonnement/sim-only&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Sim Only</a></li>
+                                                    <li><a href="/shop/aanbiedingen" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Aanbiedingen | /shop/aanbiedingen&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Aanbiedingen | /shop/aanbiedingen&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Aanbiedingen</a></li>
+                                                    <li><a href="/iphone/iphone-14" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;iPhone 14 | /iphone/iphone-14&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;iPhone 14 | /iphone/iphone-14&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">iPhone 14</a></li>
+                                                    <li><a href="/iphone/iphone-14-pro" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;iPhone 14 Pro | /iphone/iphone-14-pro&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;iPhone 14 Pro | /iphone/iphone-14-pro&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">iPhone 14 Pro</a></li>
+                                                    <li><a href="/iphone/iphone-13" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;iPhone 13 | /iphone/iphone-13&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;iPhone 13 | /iphone/iphone-13&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">iPhone 13</a></li>
+                                                    <li><a href="/samsung/galaxy-s23-series" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Samsung Galaxy S23 | /samsung/galaxy-s23-series&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Samsung Galaxy S23 | /samsung/galaxy-s23-series&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Samsung Galaxy S23</a></li>
+                                                    <li><a href="/samsung/galaxy-s23-ultra" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Samsung Galaxy S23 Ultra | /samsung/galaxy-s23-ultra&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Samsung Galaxy S23 Ultra | /samsung/galaxy-s23-ultra&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Samsung Galaxy S23 Ultra</a></li>
+                                                    <li><a href="/shop/alle-smartwatches" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Smartwatches | /shop/alle-smartwatches&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Smartwatches | /shop/alle-smartwatches&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Smartwatches</a></li>
+                                                    <li><a href="/shop/alle-tablets" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Tablets | /shop/alle-tablets&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Tablets | /shop/alle-tablets&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Tablets</a></li>
+                                                    <li><a href="/keuzehulp" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Keuzehulp telefoons | /keuzehulp&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Keuzehulp telefoons | /keuzehulp&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Keuzehulp telefoons</a></li>
+                                                                                            </ul>
+                                        </div>
+                                        <div class="navbar-menu-sub-column column-12 column-desktop-auto">
+                                            <span class="navbar-menu-sub-heading">
+                                                <a href="/mobiel-abonnement" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Abonnementen | /mobiel-abonnement&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Abonnementen | /mobiel-abonnement&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;}}">Abonnementen</a>
+                                            </span>
+                                            <ul class="navbar-menu-sub-list">
+                                                    <li><a href="/mobiel-abonnement" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Mobiel abonnement | /mobiel-abonnement&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Mobiel abonnement | /mobiel-abonnement&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Mobiel abonnement</a></li>
+                                                    <li><a href="/mobiel-abonnement/verlengen" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Verlengen | /mobiel-abonnement/verlengen&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Verlengen | /mobiel-abonnement/verlengen&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Verlengen</a></li>
+                                                    <li><a href="/go-unlimited" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Unlimited | /go-unlimited&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Unlimited | /go-unlimited&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Unlimited</a></li>
+                                                    <li><a href="/unlimited-entertainment" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Unlimited Entertainment | /unlimited-entertainment&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Unlimited Entertainment | /unlimited-entertainment&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Unlimited Entertainment</a></li>
+                                                    <li><a href="/multisim" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Multisim | /multisim&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Multisim | /multisim&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Multisim</a></li>
+                                                    <li><a href="/mobiel/netwerk/5g" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;5G | /mobiel/netwerk/5g&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;5G | /mobiel/netwerk/5g&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">5G</a></li>
+                                                    <li><a href="/dual-sim-esim" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;eSIM | /dual-sim-esim&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;eSIM | /dual-sim-esim&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">eSIM</a></li>
+                                                    <li><a href="/4g-voor-thuis" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;4G voor Thuis | /4g-voor-thuis&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;4G voor Thuis | /4g-voor-thuis&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">4G voor Thuis</a></li>
+                                                    <li><a href="/klantenservice/bestelling-en-abonnement/overstappen-naar-t-mobile" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Overstappen | /klantenservice/bestelling-en-abonnement/overstappen-naar-t-mobile&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Overstappen | /klantenservice/bestelling-en-abonnement/overstappen-naar-t-mobile&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Overstappen</a></li>
+                                                                                            </ul>
+                                        </div>
+                                        <div class="navbar-menu-sub-column column-12 column-desktop-auto">
+                                            <span class="navbar-menu-sub-heading">
+                                                <a href="/klantvoordeel" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Jouw voordeel | /klantvoordeel&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Jouw voordeel | /klantvoordeel&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;}}">Jouw voordeel</a>
+                                            </span>
+                                            <ul class="navbar-menu-sub-list">
+                                                    <li><a href="/go-go-go-deals" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;GOGOGO Deals | /go-go-go-deals&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;GOGOGO Deals | /go-go-go-deals&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">GOGOGO Deals</a></li>
+                                                    <li><a href="/mobiel-thuis-informatie" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Mobiel + Thuis | /mobiel-thuis-informatie&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Mobiel + Thuis | /mobiel-thuis-informatie&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Mobiel + Thuis</a></li>
+                                                    <li><a href="/klantvoordeel" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;T-Mobile Klantvoordeel | /klantvoordeel&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;T-Mobile Klantvoordeel | /klantvoordeel&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">T-Mobile Klantvoordeel</a></li>
+                                                    <li><a href="/toestelinruil" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Toestelinruil | /toestelinruil&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Toestelinruil | /toestelinruil&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Toestelinruil</a></li>
+                                                    <li><a href="/recycledeal" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Recycle Deal | /recycledeal&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Recycle Deal | /recycledeal&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Recycle Deal</a></li>
+                                                    <li><a href="https://accessoires.t-mobile.nl/" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Accessoires | https://accessoires.t-mobile.nl/&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Accessoires | https://accessoires.t-mobile.nl/&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Accessoires</a></li>
+                                                                                            </ul>
+                                        </div>
+                                        <div class="navbar-menu-sub-column column-12 column-desktop-auto">
+                                            <span class="navbar-menu-sub-heading">
+                                                <a href="/mobiel/prepaid" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;PrePaid | /mobiel/prepaid&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;PrePaid | /mobiel/prepaid&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;}}">PrePaid</a>
+                                            </span>
+                                            <ul class="navbar-menu-sub-list">
+                                                    <li><a href="/mobiel/prepaid" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;PrePaid | /mobiel/prepaid&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;PrePaid | /mobiel/prepaid&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">PrePaid</a></li>
+                                                    <li><a href="/shop/product/prepaid-sim-only" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;PrePaid Sim Only | /shop/product/prepaid-sim-only&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;PrePaid Sim Only | /shop/product/prepaid-sim-only&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">PrePaid Sim Only</a></li>
+                                                    <li><a href="/prepaid/opwaarderen" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Opwaarderen | /prepaid/opwaarderen&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Opwaarderen | /prepaid/opwaarderen&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Opwaarderen</a></li>
+                                                    <li><a href="/mobiel/prepaid/bundels" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Bundels | /mobiel/prepaid/bundels&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Bundels | /mobiel/prepaid/bundels&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Bundels</a></li>
+                                                    <li><a href="/mobiel/prepaid/kids" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;PrePaid Kids | /mobiel/prepaid/kids&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;PrePaid Kids | /mobiel/prepaid/kids&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">PrePaid Kids</a></li>
+                                                                                                    <li class="has-button">
+                                                        <a href="/shop" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown_button&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Mobiel | /shop&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Mobiel | /shop&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown_button&quot;}}" class="button-primary button-small">Naar Mobiel</a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+
+                            </div>
+                        </div>
+                    </div>
+            </li>
+            <li itemprop="name" class=" is-primary-item" data-navbar-menu-dropdown="">
+                <a class="navbar-link" data-navbar-menu-item="" itemprop="url" href="/thuis" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Thuis | /thuis&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Thuis | /thuis&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive&quot;}}">Thuis</a>
+                    <div class="navbar-menu-sub">
+                        <button class="navbar-menu-sub-back" data-navbar-menu-back="">Thuis</button>
+                        <div class="navbar-menu-sub-container">
+                            <div class="row no-gutters">
+                                        <div class="navbar-menu-sub-column column-12 column-desktop-auto">
+                                            <span class="navbar-menu-sub-heading">
+                                                <a href="/thuis/shop/alle-pakketten" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Pakketten | /thuis/shop/alle-pakketten&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Pakketten | /thuis/shop/alle-pakketten&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;}}">Pakketten</a>
+                                            </span>
+                                            <ul class="navbar-menu-sub-list">
+                                                    <li><a href="/thuis/internet/only" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Internet Only | /thuis/internet/only&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Internet Only | /thuis/internet/only&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Internet Only</a></li>
+                                                    <li><a href="/thuis/internet-en-tv" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Internet en TV | /thuis/internet-en-tv&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Internet en TV | /thuis/internet-en-tv&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Internet en TV</a></li>
+                                                    <li><a href="/thuis/alles-in-1" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Internet, TV en bellen | /thuis/alles-in-1&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Internet, TV en bellen | /thuis/alles-in-1&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Internet, TV en bellen</a></li>
+                                                    <li><a href="/mobiel-thuis" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Mobiel + Thuis | /mobiel-thuis&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Mobiel + Thuis | /mobiel-thuis&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Mobiel + Thuis</a></li>
+                                                    <li><a href="/thuis/shop/alle-pakketten" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Pakkettenoverzicht | /thuis/shop/alle-pakketten&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Pakkettenoverzicht | /thuis/shop/alle-pakketten&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Pakkettenoverzicht</a></li>
+                                                    <li><a href="/thuis/shop/product/zelf-samenstellen" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Zelf Samenstellen | /thuis/shop/product/zelf-samenstellen&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Zelf Samenstellen | /thuis/shop/product/zelf-samenstellen&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Zelf Samenstellen</a></li>
+                                                                                            </ul>
+                                        </div>
+                                        <div class="navbar-menu-sub-column column-12 column-desktop-auto">
+                                            <span class="navbar-menu-sub-heading">
+                                                <a href="/thuis/internet" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Internetopties | /thuis/internet&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Internetopties | /thuis/internet&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;}}">Internetopties</a>
+                                            </span>
+                                            <ul class="navbar-menu-sub-list">
+                                                    <li><a href="/thuis/internet/glasvezel" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Glasvezel internet | /thuis/internet/glasvezel&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Glasvezel internet | /thuis/internet/glasvezel&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Glasvezel internet</a></li>
+                                                    <li><a href="/thuis/internet/dsl" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;DSL internet | /thuis/internet/dsl&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;DSL internet | /thuis/internet/dsl&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">DSL internet</a></li>
+                                                    <li><a href="/thuis/shop/alle-pakketten" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Postcodecheck | /thuis/shop/alle-pakketten&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Postcodecheck | /thuis/shop/alle-pakketten&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Postcodecheck</a></li>
+                                                    <li><a href="/thuis/internet/glasvezel/check" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Glasvezelcheck | /thuis/internet/glasvezel/check&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Glasvezelcheck | /thuis/internet/glasvezel/check&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Glasvezelcheck</a></li>
+                                                    <li><a href="/4g-voor-thuis" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;4G voor Thuis | /4g-voor-thuis&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;4G voor Thuis | /4g-voor-thuis&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">4G voor Thuis</a></li>
+                                                    <li><a href="/thuis/internet/wifi-plus" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Wifi Plus | /thuis/internet/wifi-plus&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Wifi Plus | /thuis/internet/wifi-plus&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Wifi Plus</a></li>
+                                                                                            </ul>
+                                        </div>
+                                        <div class="navbar-menu-sub-column column-12 column-desktop-auto">
+                                            <span class="navbar-menu-sub-heading">
+                                                <a href="/thuis/interactieve-tv" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;TV opties | /thuis/interactieve-tv&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;TV opties | /thuis/interactieve-tv&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;}}">TV opties</a>
+                                            </span>
+                                            <ul class="navbar-menu-sub-list">
+                                                    <li><a href="/thuis/interactieve-tv" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;T-Mobile TV | /thuis/interactieve-tv&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;T-Mobile TV | /thuis/interactieve-tv&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">T-Mobile TV</a></li>
+                                                    <li><a href="/thuis/interactieve-tv/tv-anywhere" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;TV Anywhere | /thuis/interactieve-tv/tv-anywhere&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;TV Anywhere | /thuis/interactieve-tv/tv-anywhere&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">TV Anywhere</a></li>
+                                                    <li><a href="/klantenservice/thuis/tv/zenders/overzicht?" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Zenderoverzicht | /klantenservice/thuis/tv/zenders/overzicht?&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Zenderoverzicht | /klantenservice/thuis/tv/zenders/overzicht?&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Zenderoverzicht</a></li>
+                                                    <li><a href="/thuis/interactieve-tv/zenderpakketten/viaplay" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Viaplay | /thuis/interactieve-tv/zenderpakketten/viaplay&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Viaplay | /thuis/interactieve-tv/zenderpakketten/viaplay&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Viaplay</a></li>
+                                                    <li><a href="/thuis/interactieve-tv/zenderpakketten/espn" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;ESPN | /thuis/interactieve-tv/zenderpakketten/espn&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;ESPN | /thuis/interactieve-tv/zenderpakketten/espn&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">ESPN</a></li>
+                                                    <li><a href="/thuis/interactieve-tv/zenderpakketten/ziggo-sport-totaal" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Ziggo Sport Totaal | /thuis/interactieve-tv/zenderpakketten/ziggo-sport-totaal&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Ziggo Sport Totaal | /thuis/interactieve-tv/zenderpakketten/ziggo-sport-totaal&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Ziggo Sport Totaal</a></li>
+                                                                                            </ul>
+                                        </div>
+                                        <div class="navbar-menu-sub-column column-12 column-desktop-auto">
+                                            <span class="navbar-menu-sub-heading">
+                                                <a href="/thuis/bellen" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Onze service | /thuis/bellen&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Onze service | /thuis/bellen&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;}}">Onze service</a>
+                                            </span>
+                                            <ul class="navbar-menu-sub-list">
+                                                    <li><a href="/thuis/overstappen" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Overstappen | /thuis/overstappen&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Overstappen | /thuis/overstappen&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Overstappen</a></li>
+                                                    <li><a href="/klantvoordeel" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;T-Mobile Klantvoordeel | /klantvoordeel&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;T-Mobile Klantvoordeel | /klantvoordeel&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">T-Mobile Klantvoordeel</a></li>
+                                                    <li><a href="/thuis/bellen" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Vast bellen | /thuis/bellen&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Vast bellen | /thuis/bellen&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Vast bellen</a></li>
+                                                    <li><a href="/thuis/internet/speedtest" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Speedtest | /thuis/internet/speedtest&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Speedtest | /thuis/internet/speedtest&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Speedtest</a></li>
+                                                    <li><a href="/thuis/internet/veiligheid" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Veilig Online | /thuis/internet/veiligheid&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Veilig Online | /thuis/internet/veiligheid&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Veilig Online</a></li>
+                                                                                                    <li class="has-button">
+                                                        <a href="/thuis" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown_button&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Thuis | /thuis&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Thuis | /thuis&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown_button&quot;}}" class="button-primary button-small">Naar Thuis</a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+
+                            </div>
+                        </div>
+                    </div>
+            </li>
+            <li itemprop="name" class=" is-primary-item" data-navbar-menu-dropdown="">
+                <a class="navbar-link" data-navbar-menu-item="" itemprop="url" href="/mobiel-thuis-informatie" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Mobiel+Thuis | /mobiel-thuis-informatie&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Mobiel+Thuis | /mobiel-thuis-informatie&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive&quot;}}">Mobiel+Thuis</a>
+                    <div class="navbar-menu-sub">
+                        <button class="navbar-menu-sub-back" data-navbar-menu-back="">Mobiel+Thuis</button>
+                        <div class="navbar-menu-sub-container">
+                            <div class="row no-gutters">
+                                        <div class="navbar-menu-sub-column column-12 column-desktop-auto">
+                                            <span class="navbar-menu-sub-heading">
+                                                <a href="/mobiel-thuis-informatie" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Welke T-Mobile abonnementen heb je al? | /mobiel-thuis-informatie&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Welke T-Mobile abonnementen heb je al? | /mobiel-thuis-informatie&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;}}">Welke T-Mobile abonnementen heb je al?</a>
+                                            </span>
+                                            <ul class="navbar-menu-sub-list">
+                                                    <li><a href="/mobiel-thuis" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Ik ben nog geen klant | /mobiel-thuis&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Ik ben nog geen klant | /mobiel-thuis&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Ik ben nog geen klant</a></li>
+                                                    <li><a href="/mobiel-thuis/mobiel" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Ik heb T-Mobile Mobiel | /mobiel-thuis/mobiel&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Ik heb T-Mobile Mobiel | /mobiel-thuis/mobiel&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Ik heb T-Mobile Mobiel</a></li>
+                                                    <li><a href="/mobiel-thuis/thuis" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Ik heb T-Mobile Thuis | /mobiel-thuis/thuis&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Ik heb T-Mobile Thuis | /mobiel-thuis/thuis&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Ik heb T-Mobile Thuis</a></li>
+                                                    <li><a href="/klantvoordeel" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Ik heb T-Mobile Mobiel en Thuis | /klantvoordeel&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Ik heb T-Mobile Mobiel en Thuis | /klantvoordeel&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Ik heb T-Mobile Mobiel en Thuis</a></li>
+                                                                                                    <li class="has-button">
+                                                        <a href="/mobiel-thuis-informatie" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown_button&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Mobiel+Thuis | /mobiel-thuis-informatie&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Mobiel+Thuis | /mobiel-thuis-informatie&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown_button&quot;}}" class="button-primary button-small">Naar Mobiel+Thuis</a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+
+                            </div>
+                        </div>
+                    </div>
+            </li>
+            <li itemprop="name" class=" is-primary-item" data-navbar-menu-dropdown="">
+                <a class="navbar-link" data-navbar-menu-item="" itemprop="url" href="/klantenservice" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Klantenservice | /klantenservice&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Klantenservice | /klantenservice&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive&quot;}}">Klantenservice</a>
+                    <div class="navbar-menu-sub">
+                        <button class="navbar-menu-sub-back" data-navbar-menu-back="">Klantenservice</button>
+                        <div class="navbar-menu-sub-container">
+                            <div class="row no-gutters">
+                                        <div class="navbar-menu-sub-column column-12 column-desktop-auto">
+                                            <span class="navbar-menu-sub-heading">
+                                                <a href="/klantenservice/mobiel" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Klantenservice Mobiel | /klantenservice/mobiel&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Klantenservice Mobiel | /klantenservice/mobiel&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;}}">Klantenservice Mobiel</a>
+                                            </span>
+                                            <ul class="navbar-menu-sub-list">
+                                                    <li><a href="/klantenservice/mobiel/facturen-en-tarieven" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Facturen &amp; tarieven | /klantenservice/mobiel/facturen-en-tarieven&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Facturen &amp; tarieven | /klantenservice/mobiel/facturen-en-tarieven&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Facturen &amp; tarieven</a></li>
+                                                    <li><a href="/klantenservice/mobiel/abonnement-wijzigen" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Abonnement wijzigen | /klantenservice/mobiel/abonnement-wijzigen&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Abonnement wijzigen | /klantenservice/mobiel/abonnement-wijzigen&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Abonnement wijzigen</a></li>
+                                                    <li><a href="/klantenservice/mobiel/opzeggen-of-verlengen" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Verlengen | /klantenservice/mobiel/opzeggen-of-verlengen&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Verlengen | /klantenservice/mobiel/opzeggen-of-verlengen&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Verlengen</a></li>
+                                                    <li><a href="/klantenservice/mobiel/simkaart" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Simkaart &amp; eSIM | /klantenservice/mobiel/simkaart&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Simkaart &amp; eSIM | /klantenservice/mobiel/simkaart&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Simkaart &amp; eSIM</a></li>
+                                                    <li><a href="/klantenservice/mobiel/toestel" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Toestel | /klantenservice/mobiel/toestel&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Toestel | /klantenservice/mobiel/toestel&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Toestel</a></li>
+                                                    <li><a href="/klantenservice/mobiel/gegevens-wijzigen" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Gegevens wijzigen | /klantenservice/mobiel/gegevens-wijzigen&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Gegevens wijzigen | /klantenservice/mobiel/gegevens-wijzigen&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Gegevens wijzigen</a></li>
+                                                    <li><a href="/klantenservice/mobiel/alles-over-je-bestelling" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Bestelling | /klantenservice/mobiel/alles-over-je-bestelling&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Bestelling | /klantenservice/mobiel/alles-over-je-bestelling&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Bestelling</a></li>
+                                                    <li><a href="/klantenservice/mobiel/prepaid" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;PrePaid | /klantenservice/mobiel/prepaid&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;PrePaid | /klantenservice/mobiel/prepaid&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">PrePaid</a></li>
+                                                                                            </ul>
+                                        </div>
+                                        <div class="navbar-menu-sub-column column-12 column-desktop-auto">
+                                            <span class="navbar-menu-sub-heading">
+                                                <a href="/klantenservice/thuis" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Klantenservice Thuis | /klantenservice/thuis&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Klantenservice Thuis | /klantenservice/thuis&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;}}">Klantenservice Thuis</a>
+                                            </span>
+                                            <ul class="navbar-menu-sub-list">
+                                                    <li><a href="/klantenservice/thuis/internet-wifi" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Internet &amp; Wifi | /klantenservice/thuis/internet-wifi&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Internet &amp; Wifi | /klantenservice/thuis/internet-wifi&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Internet &amp; Wifi</a></li>
+                                                    <li><a href="/klantenservice/thuis/tv" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Interactieve TV | /klantenservice/thuis/tv&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Interactieve TV | /klantenservice/thuis/tv&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Interactieve TV</a></li>
+                                                    <li><a href="/klantenservice/thuis/vast-bellen" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Vast Bellen | /klantenservice/thuis/vast-bellen&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Vast Bellen | /klantenservice/thuis/vast-bellen&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Vast Bellen</a></li>
+                                                    <li><a href="/klantenservice/thuis/bestelling" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Bestelling &amp; Installatie | /klantenservice/thuis/bestelling&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Bestelling &amp; Installatie | /klantenservice/thuis/bestelling&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Bestelling &amp; Installatie</a></li>
+                                                    <li><a href="/klantenservice/thuis/factuur" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Factuur | /klantenservice/thuis/factuur&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Factuur | /klantenservice/thuis/factuur&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Factuur</a></li>
+                                                    <li><a href="/klantenservice/thuis/mijn-abonnement" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Abonnement | /klantenservice/thuis/mijn-abonnement&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Abonnement | /klantenservice/thuis/mijn-abonnement&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Abonnement</a></li>
+                                                    <li><a href="/klantenservice/thuis/storing-en-onderhoud" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Onderhoud &amp; storingen | /klantenservice/thuis/storing-en-onderhoud&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Onderhoud &amp; storingen | /klantenservice/thuis/storing-en-onderhoud&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Onderhoud &amp; storingen</a></li>
+                                                    <li><a href="/klantenservice/thuis/bestelling/overstappen" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Overstappen | /klantenservice/thuis/bestelling/overstappen&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Overstappen | /klantenservice/thuis/bestelling/overstappen&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Overstappen</a></li>
+                                                                                            </ul>
+                                        </div>
+                                        <div class="navbar-menu-sub-column column-12 column-desktop-auto">
+                                            <span class="navbar-menu-sub-heading">
+                                                <a href="/klantenservice/bekijk-ook" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Bekijk ook | /klantenservice/bekijk-ook&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Bekijk ook | /klantenservice/bekijk-ook&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown_title&quot;}}">Bekijk ook</a>
+                                            </span>
+                                            <ul class="navbar-menu-sub-list">
+                                                    <li><a href="/klantenservice/contact" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Contact | /klantenservice/contact&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Contact | /klantenservice/contact&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Contact</a></li>
+                                                    <li><a href="/login" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;My T-Mobile | /login&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;My T-Mobile | /login&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">My T-Mobile</a></li>
+                                                    <li><a href="/klantvoordeel-activeren" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Aanmelden Klantvoordeel | /klantvoordeel-activeren&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Aanmelden Klantvoordeel | /klantvoordeel-activeren&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Aanmelden Klantvoordeel</a></li>
+                                                    <li><a href="/winkels" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Winkels | /winkels&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Winkels | /winkels&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Winkels</a></li>
+                                                    <li><a href="/klantenservice/mobiel/buitenland" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Buitenland | /klantenservice/mobiel/buitenland&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Buitenland | /klantenservice/mobiel/buitenland&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Buitenland</a></li>
+                                                    <li><a href="/mobiel/netwerk/dekking" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Netwerk &amp; Storingen | /mobiel/netwerk/dekking&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Netwerk &amp; Storingen | /mobiel/netwerk/dekking&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Netwerk &amp; Storingen</a></li>
+                                                    <li><a href="/klantenservice/thuis/veilig-online" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Veilig Online | /klantenservice/thuis/veilig-online&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Veilig Online | /klantenservice/thuis/veilig-online&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Veilig Online</a></li>
+                                                    <li><a href="/mobiel/netwerk/internetsnelheid" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Mobiele internetsnelheid | /mobiel/netwerk/internetsnelheid&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Mobiele internetsnelheid | /mobiel/netwerk/internetsnelheid&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown&quot;}}">Mobiele internetsnelheid</a></li>
+                                                                                                    <li class="has-button">
+                                                        <a href="/klantenservice" itemprop="url" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_prive_dropdown_button&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Klantenservice | /klantenservice&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Klantenservice | /klantenservice&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_prive_dropdown_button&quot;}}" class="button-primary button-small">Naar Klantenservice</a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+
+                            </div>
+                        </div>
+                    </div>
+            </li>
+    </ul>
+            <div class="navbar-container hidden-desktop-up">
+                <ul class="navbar-meta-toggle">
+                        <li class="is-active" itemprop="name"><a itemprop="url" href="/">Privé</a></li>
+                        <li itemprop="name"><a itemprop="url" data-analytics-click-once="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_zakelijk_toggle_mobile&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Zakelijk | /zakelijk&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Zakelijk | /zakelijk&quot;,&quot;Category&quot;:&quot;hoofdnavigatie_zakelijk_toggle_mobile&quot;}}" href="/zakelijk">Zakelijk</a></li>
+                </ul>
+            </div>
+</nav>
+    <div class="navbar-user " data-navbar-user="">
+            <a role="button" tabindex="0" class="navbar-link navbar-user-toggle" title="097032380955" data-navbar-user-toggle="">
+                <span class="icon-user"></span>
+                <span class="hidden-tablet-down ml-1 text-truncate" data-hj-masked="">097032380955</span>
+            </a>
+    </div>
+<form action="/zoeken" class="navbar-search" data-navbar-search="" method="post" novalidate="novalidate"><input name="__BindingPrefix" type="hidden" value="SearchBox">        <div class="navbar-search-close" data-navbar-search-close="">
+            <button aria-label="Zoekveld sluiten" type="button">
+                <span class="icon-arrow-left"></span>
+            </button>
+        </div>
+<input autocorrect="off" class="navbar-search-input" data-navbar-search-input="" id="SearchBox_SearchTerm" name="SearchBox.SearchTerm" placeholder="Zoeken.." spellcheck="False" type="search" value="" autocomplete="off">        <div class="navbar-search-clear" data-autocomplete-clear="">
+            <button aria-label="Zoekveld leegmaken" type="button">
+                <span class="icon-error-solid"></span>
+            </button>
+        </div>
+        <div role="button" tabindex="0" class="navbar-search-open" data-navbar-search-open="" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;hoofdnavigatie_search&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Open zoek functie&quot;}}">
+            <span class="icon-search" aria-labelledby="SearchBox_SearchboxSearch"></span>
+            <span id="SearchBox_SearchboxSearch" class="navbar-search-open-label hidden-tablet-down ml-1">Zoeken</span>
+        </div>
+        <div class="navbar-search-overlay" data-navbar-search-close=""></div>
+        
+</form><div class="navbar-cart" data-navbar-cart="">
+    <a data-interaction-id="page-component-shopping-cart-link" href="/shop/bestellen/winkelwagen?ch=es&amp;cc=con&amp;sc=acq" class="navbar-cart-open" data-navbar-cart-open="">
+        <div class="badge-wrapper">
+            <span data-shopping-cart-total-quantity="" class="badge" aria-label="0 producten">0</span>
+            <span class="icon-cart"></span>
+        </div>
+    </a>
+    <div class="navbar-cart-dropdown" data-navbar-cart-dropdown="" x-placement="bottom-end" style="position: absolute; transform: translate3d(40px, 79px, 0px); top: 0px; left: 0px; will-change: transform;">
+        <div class="navbar-cart-arrow" x-arrow="" style="left: 0px;"></div>
+            <div class="navbar-cart-totals text-center p-4">
+                <strong class="text-weight-normal text-medium">
+                    Je winkelwagen is leeg
+                </strong>
+                <a data-interaction-id="shopping-cart-checkout-button" class="button-success button-block mt-4" href="/shop/bestellen/winkelwagen?ch=es&amp;cc=con&amp;sc=acq">
+                    Naar winkelwagen
+                </a>
+            </div>
+    </div>
+    <div class="navbar-cart-backdrop"></div>
+</div>                <label for="navbar-menu-state" role="button" class="navbar-menu-toggle">
+                    <span class="navbar-menu-toggle-stripes">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <span class="sr-only">Menu schakelen</span>
+                </label>
+
+        </div>
+    </header>
+
+
+
+
+
+
+<main role="main">
+            <section id="se1" class="section bg-gray-lighter pt-0">
+                    <div class="container">
+            
+                        <div id="se1ro1" class="row no-column-gutters ">
+                    <div id="se1ro1co1" class="column-tablet-12 ">
+                            <div id="se1ro1co1ce1" class="cell">
+
+    <div id="Section1_Row1_Column1_Cell1_RoamingDataPurchase_Container" class="gutters">
+<form action="/roamingstatus" method="post" novalidate="novalidate"><input name="__UniqueContentId" type="hidden" value="/section1/row1/column1/cell1/Consumer/htblocks/wc902_application_dotnet/default/my/redesign/RoamingData/RoamingStatus"><input name="__BindingPrefix" type="hidden" value="Section1.Row1.Column1.Cell1.RoamingDataPurchase"><input name="__RequestVerificationToken" type="hidden" value="plO4oBMaWluBlcmy-NrMRleVHMG3EYrYeCrkerEYUQfl8rB4WX8HCZlN-6GT0bXmvvpDKxNpWv1hqp-cfZk545_QweHBoPdXqFcqd6s3pp7X2VWsX6-E6lUV0JeniwY25V7nzoh5Q1EKsfHcxNTJKQ2">            <input type="hidden" name="Section1.Row1.Column1.Cell1.RoamingDataPurchase.GetAvailableRoamingBundles" value="1">
+            <div class="container">
+                <div class="row pt-5">
+                    <div class="column-12">
+                        <div class="text-center">
+                            <h1>MB's aanvullen</h1>
+                        </div>
+                    </div>
+                </div>
+<div class="row" id="Section1_Row1_Column1_Cell1_RoamingDataPurchase__Loading">
+    <div class="column-12 column-desktop-8 mx-desktop-auto">
+        <div class="row">
+            <div class="column-12">
+                <ul class="list-group-inset">
+                    <li>
+                        <div class="flex">                            
+                            <img src=" /Assets/Images/skeleton/text-line-dark.svg" alt="loading">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column-12">
+                <ul class="list-group-inset">
+                    <li>
+                        <div class="flex">
+                            <img src=" /Assets/Images/skeleton/text-line-dark.svg" alt="loading">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <img src=" /Assets/Images/skeleton/text-line-dark.svg" alt="loading">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <img src=" /Assets/Images/skeleton/text-line-dark.svg" alt="loading">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column-12">
+                <ul class="list-group-inset">
+                    <li>
+                        <div class="flex">
+                            <img src=" /Assets/Images/skeleton/text-line-dark.svg" alt="loading">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" id="Section1_Row1_Column1_Cell1_RoamingDataPurchase__Error" style="display: none;">
+    <div class="column-12 column-tablet-8 mx-tablet-auto">
+        <div class="callout-danger" data-interaction-id="loading-failed">
+            <div class="flex align-items-center">
+                <div class="icon-error-solid text-red align-self-start mr-2"></div>
+                <div class="text-muted">
+                    <p>Er is een fout opgetreden, we kunnen nu niet bepalen of je je MB’s kunt aanvullen. Probeer het later nog eens.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+</form>    </div>
+
+
+
+
+                            </div>
+                    </div>
+            </div>
+            <div id="se1ro2" class="row no-column-gutters ">
+                    <div id="se1ro2co1" class="column-tablet-12 ">
+                    </div>
+            </div>
+
+        </div>
+
+        </section>
+</main>
+    <footer class="footer">
+
+
+
+<!--googleoff: all-->
+
+<div class="footer-section">
+    <div class="container">
+        <nav class="footer-nav row">
+                <div class="column-desktop">
+                    <input class="footer-nav-toggle" type="checkbox" id="FooterSitemap_footer-nav-list_0">
+                    <label class="footer-nav-title footer-nav-title--inverse" for="FooterSitemap_footer-nav-list_0">Populaire telefoons</label>
+                    <ul class="footer-nav-list">
+                            <li><a href="/iphone" title="iPhone" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;iPhone | /iphone&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;iPhone | /iphone&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">iPhone</a></li>
+                            <li><a href="/iphone/iphone-14" title="iPhone 14" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;iPhone 14 | /iphone/iphone-14&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;iPhone 14 | /iphone/iphone-14&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">iPhone 14</a></li>
+                            <li><a href="/iphone/iphone-13" title="iPhone 13" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;iPhone 13 | /iphone/iphone-13&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;iPhone 13 | /iphone/iphone-13&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">iPhone 13</a></li>
+                            <li><a href="/samsung" title="Samsung" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Samsung | /samsung&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Samsung | /samsung&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Samsung</a></li>
+                            <li><a href="/samsung/galaxy-s23-plus" title="Samsung Galaxy S23 Plus" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Samsung Galaxy S23 Plus | /samsung/galaxy-s23-plus&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Samsung Galaxy S23 Plus | /samsung/galaxy-s23-plus&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Samsung Galaxy S23 Plus</a></li>
+                            <li><a href="/samsung/galaxy-s22" title="Samsung Galaxy S22" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Samsung Galaxy S22 | /samsung/galaxy-s22&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Samsung Galaxy S22 | /samsung/galaxy-s22&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Samsung Galaxy S22</a></li>
+                            <li><a href="/shop/alle-telefoons" title="Alle telefoons" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Alle telefoons | /shop/alle-telefoons&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Alle telefoons | /shop/alle-telefoons&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Alle telefoons</a></li>
+                    </ul>
+                </div>
+                <div class="column-desktop">
+                    <input class="footer-nav-toggle" type="checkbox" id="FooterSitemap_footer-nav-list_1">
+                    <label class="footer-nav-title footer-nav-title--inverse" for="FooterSitemap_footer-nav-list_1">Abonnementen</label>
+                    <ul class="footer-nav-list">
+                            <li><a href="/mobiel-abonnement" title="Mobiel abonnement" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Mobiel abonnement | /mobiel-abonnement&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Mobiel abonnement | /mobiel-abonnement&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Mobiel abonnement</a></li>
+                            <li><a href="/go-unlimited" title="Unlimited" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Unlimited | /go-unlimited&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Unlimited | /go-unlimited&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Unlimited</a></li>
+                            <li><a href="/mobiel-abonnement/sim-only?" title="Sim Only" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Sim Only | /mobiel-abonnement/sim-only?&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Sim Only | /mobiel-abonnement/sim-only?&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Sim Only</a></li>
+                            <li><a href="/mobiel/prepaid" title="Prepaid" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Prepaid | /mobiel/prepaid&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Prepaid | /mobiel/prepaid&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Prepaid</a></li>
+                            <li><a href="/mobiel-internet" title="Mobiel internet" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Mobiel internet | /mobiel-internet&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Mobiel internet | /mobiel-internet&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Mobiel internet</a></li>
+                            <li><a href="/mobiel/netwerk/5g" title="5G" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;5G | /mobiel/netwerk/5g&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;5G | /mobiel/netwerk/5g&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">5G</a></li>
+                            <li><a href="/4g-voor-thuis" title="4G voor Thuis" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;4G voor Thuis | /4g-voor-thuis&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;4G voor Thuis | /4g-voor-thuis&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">4G voor Thuis</a></li>
+                    </ul>
+                </div>
+                <div class="column-desktop">
+                    <input class="footer-nav-toggle" type="checkbox" id="FooterSitemap_footer-nav-list_2">
+                    <label class="footer-nav-title footer-nav-title--inverse" for="FooterSitemap_footer-nav-list_2">Thuis</label>
+                    <ul class="footer-nav-list">
+                            <li><a href="/thuis" title="T-Mobile Thuis" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;T-Mobile Thuis | /thuis&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;T-Mobile Thuis | /thuis&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">T-Mobile Thuis</a></li>
+                            <li><a href="/thuis/internet-en-tv" title="Internet en TV" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Internet en TV | /thuis/internet-en-tv&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Internet en TV | /thuis/internet-en-tv&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Internet en TV</a></li>
+                            <li><a href="/thuis/internet" title="Internet" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Internet | /thuis/internet&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Internet | /thuis/internet&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Internet</a></li>
+                            <li><a href="/thuis/internet/only" title="Internet only" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Internet only | /thuis/internet/only&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Internet only | /thuis/internet/only&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Internet only</a></li>
+                            <li><a href="/thuis/alles-in-1" title="Alles-in-1" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Alles-in-1 | /thuis/alles-in-1&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Alles-in-1 | /thuis/alles-in-1&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Alles-in-1</a></li>
+                            <li><a href="/thuis/internet/glasvezel" title="Glasvezel" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Glasvezel | /thuis/internet/glasvezel&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Glasvezel | /thuis/internet/glasvezel&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Glasvezel</a></li>
+                            <li><a href="/thuis/interactieve-tv/" title="T-Mobile TV" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;T-Mobile TV | /thuis/interactieve-tv/&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;T-Mobile TV | /thuis/interactieve-tv/&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">T-Mobile TV</a></li>
+                    </ul>
+                </div>
+                <div class="column-desktop">
+                    <input class="footer-nav-toggle" type="checkbox" id="FooterSitemap_footer-nav-list_3">
+                    <label class="footer-nav-title footer-nav-title--inverse" for="FooterSitemap_footer-nav-list_3">Klantenservice</label>
+                    <ul class="footer-nav-list">
+                            <li><a href="/klantenservice/mobiel" title="Klantenservice Mobiel" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Klantenservice Mobiel | /klantenservice/mobiel&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Klantenservice Mobiel | /klantenservice/mobiel&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Klantenservice Mobiel</a></li>
+                            <li><a href="/klantenservice/thuis" title="Klantenservice Thuis" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Klantenservice Thuis | /klantenservice/thuis&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Klantenservice Thuis | /klantenservice/thuis&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Klantenservice Thuis</a></li>
+                            <li><a href="/my/voordelen" title="Zelf regelen" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Zelf regelen | /my/voordelen&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Zelf regelen | /my/voordelen&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Zelf regelen</a></li>
+                            <li><a href="/winkels" title="Winkels" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Winkels | /winkels&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Winkels | /winkels&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Winkels</a></li>
+                            <li><a href="/betalen" title="Factuur betalen" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Factuur betalen | /betalen&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Factuur betalen | /betalen&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Factuur betalen</a></li>
+                            <li><a href="/my/verlengen" title="Verlengen" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Verlengen | /my/verlengen&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Verlengen | /my/verlengen&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Verlengen</a></li>
+                    </ul>
+                </div>
+                <div class="column-desktop">
+                    <input class="footer-nav-toggle" type="checkbox" id="FooterSitemap_footer-nav-list_4">
+                    <label class="footer-nav-title footer-nav-title--inverse" for="FooterSitemap_footer-nav-list_4">My T-Mobile</label>
+                    <ul class="footer-nav-list">
+                            <li><a href="/login" title="Inloggen" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Inloggen | /login&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Inloggen | /login&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Inloggen</a></li>
+                            <li><a href="/my/registreren" title="Registreren" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Registreren | /my/registreren&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Registreren | /my/registreren&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Registreren</a></li>
+                            <li><a href="/my/inloggegevens-opvragen" title="Inloggegevens opvragen" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Inloggegevens opvragen | /my/inloggegevens-opvragen&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Inloggegevens opvragen | /my/inloggegevens-opvragen&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Inloggegevens opvragen</a></li>
+                            <li><a href="/klantenservice/mobiel/my-t-mobile-app" title="My T-Mobile App" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;My T-Mobile App | /klantenservice/mobiel/my-t-mobile-app&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;My T-Mobile App | /klantenservice/mobiel/my-t-mobile-app&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">My T-Mobile App</a></li>
+                    </ul>
+                </div>
+        </nav>
+    </div>
+</div>
+
+
+
+
+<div class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="column-desktop-9 mb-3">
+                <ul class="footer-links">
+                        <li><a href="/bedrijf" title="Over T-Mobile" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Over T-Mobile | /bedrijf&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Over T-Mobile | /bedrijf&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Over T-Mobile</a></li>
+                        <li><a href="/affiliate" title="Affiliate" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Affiliate | /affiliate&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Affiliate | /affiliate&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Affiliate</a></li>
+                        <li><a href="/klantenservice/mobiel/facturen-en-tarieven/tarieven" title="Tarieven" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Tarieven | /klantenservice/mobiel/facturen-en-tarieven/tarieven&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Tarieven | /klantenservice/mobiel/facturen-en-tarieven/tarieven&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Tarieven</a></li>
+                        <li><a href="/voorwaarden" title="Voorwaarden" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Voorwaarden | /voorwaarden&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Voorwaarden | /voorwaarden&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Voorwaarden</a></li>
+                        <li><a href="https://www.teammagenta.nl" title="Vacatures" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Vacatures | https://www.teammagenta.nl&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Vacatures | https://www.teammagenta.nl&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Vacatures</a></li>
+                        <li><a href="https://www.teammagenta.nl/option/vakgebied/t-shop" title="Vacatures Shops" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Vacatures Shops | https://www.teammagenta.nl/option/vakgebied/t-shop&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Vacatures Shops | https://www.teammagenta.nl/option/vakgebied/t-shop&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Vacatures Shops</a></li>
+                        <li><a href="/privacy" title="Privacy" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Privacy | /privacy&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Privacy | /privacy&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Privacy</a></li>
+                        <li><a href="/cookies" title="Cookies" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Cookies | /cookies&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Cookies | /cookies&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Cookies</a></li>
+                        <li><a href="/klantenservice#contact" title="Contact" data-analytics-click="{&quot;event&quot;:&quot;gaEvent&quot;,&quot;gaEvent&quot;:{&quot;category&quot;:&quot;footer_prive&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;Contact | /klantenservice#contact&quot;},&quot;Application&quot;:{&quot;Action&quot;:&quot;click&quot;,&quot;Label&quot;:&quot;Contact | /klantenservice#contact&quot;,&quot;Category&quot;:&quot;footer_prive&quot;}}">Contact</a></li>
+                </ul>
+                <div><span class="text-nowrap">© T-Mobile Netherlands B.V.</span> Alle rechten voorbehouden</div>
+            </div>
+            <div class="column-desktop-3 align-self-center">
+                <ul class="footer-social">
+                    <li>
+                        <a href="//twitter.com/tmobile_webcare" rel="noopener noreferrer" target="_blank">
+                            <span class="icon-twitter-solid icon-size-m" aria-hidden="true" title="Twitter"></span>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="//www.facebook.com/tmobilenl" rel="noopener noreferrer" target="_blank">
+                            <span class="icon-facebook-solid icon-size-m" aria-hidden="true" title="Facebook"></span>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="mr-2">
+                        <a href="//www.linkedin.com/company/t-mobile-nederland/" rel="noopener noreferrer" target="_blank">
+                            <span class="icon-linkedin icon-size-m" aria-hidden="true" title="LinkedIn"></span>
+                            <span class="sr-only">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://community.t-mobile.nl/" rel="noopener noreferrer" target="_blank">
+                            <span class="icon-chat icon-size-m" aria-hidden="true" title="Forum"></span>
+                            <span class="sr-only">Forum</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </footer>
+
+
+
+
+
+
+    <script src="/Assets/JavaScripts/Static/DesignSystem?v=Mev0xrX7EMeqj74nliBH4AqtxjTj2Uu_oZxC1nenicY1"></script><div class="snackbar is-bottom-center"><span class="snackbar-progress-bar"></span><span class="snackbar-text"></span><span class="snackbar-actions"></span></div>
+
+    
+
+            <script>
+            $("[data-navbar-search-input]").autocomplete({
+                placeholder: $('[data-navbar-search-result]').detach().html(),
+                menuClass: 'navbar-search-autocomplete',
+                minChars: 2,
+                onSelect: function (event, term, item) {
+                    return false;
+                },
+                source: function (term, renderSuggestion) {
+                    $.ajax({
+                        url: "/Resources/SearchSuggest.ashx",
+                        data: { q: term },
+                        type: "GET",
+                        dataType: "jsonp",
+                        success: function (result) {
+                            renderSuggestion(result.suggestions);
+                        }
+                    });
+                }
+            });
+        </script><div class="autocomplete navbar-search-autocomplete"><div class="autocomplete-scroll"></div></div>
+
+        <script>
+                    $(function () {
+                        var startUserTimings = new Date().getTime();
+                        var durationUserTimings = null;
+                        var endUserTimings = null;
+                        var eventAction = null;
+
+                        $.ajax({
+                            type: 'POST',
+                            timeout: 12000,
+                            data: $('#Section1_Row1_Column1_Cell1_RoamingDataPurchase_Container input').serialize(),
+                            error: function () {
+                                $('#Section1_Row1_Column1_Cell1_RoamingDataPurchase_Loading').hide();
+                                $('#Section1_Row1_Column1_Cell1_RoamingDataPurchase_Error').show();
+                            },
+                            success: function (html) {
+                                $('#Section1_Row1_Column1_Cell1_RoamingDataPurchase_Container').html(html);
+
+                                endUserTimings = new Date().getTime();
+                                durationUserTimings = endUserTimings - startUserTimings;
+                                eventAction = 'succes';
+                            }
+                        });
+                    })
+        </script>
+
+        <script>
+            $(function () {
+                $('#Row1_Column1_Cell1_CookieSettings_AdvancedSaveAccept').on('click', function (e) {
+                    $('#Row1_Column1_Cell1_CookieSettings_SelectedCookieType').val('Tracking');
+                    $.TMNLkit.Analytics.register({"event":"gaEvent","gaEvent":{"category":"cookie","action":"Succes","label":"geaccepteerd"},"Application":{"Action":"Succes","Label":"geaccepteerd","Category":"cookie","Data":{"type":4}}});
+                });
+                $('#Row1_Column1_Cell1_CookieSettings_AdvancedSaveCancel').on('click', function (e) {
+                    $('#Row1_Column1_Cell1_CookieSettings_SelectedCookieType').val('Analytics');
+                    $.TMNLkit.Analytics.register({"event":"gaEvent","gaEvent":{"category":"cookie","action":"Succes","label":"geweigerd"},"Application":{"Action":"Succes","Label":"geweigerd","Category":"cookie","Data":{"type":2}}});
+                });
+            });
+        </script>
+        <script>
+            window.onload = function () {
+                const firstAnchor = document.getElementById("trap-focus-first"),
+                    lastAnchor = document.getElementById("trap-focus-last");
+
+                document.getElementById("koekjePopup").focus();
+
+                function keydownHandler(e) {
+                    var evt = e || window.event;
+                    var keyCode = evt.which || evt.keyCode;
+                    if (keyCode === 9) {
+                        if (evt.preventDefault) evt.preventDefault();
+                        else evt.returnValue = false;
+                        firstAnchor.focus();
+                    }
+                }
+
+                if (lastAnchor.addEventListener) lastAnchor.addEventListener('keydown', keydownHandler, false);
+                else if (lastAnchor.attachEvent) lastAnchor.attachEvent('onkeydown', keydownHandler);
+            }
+        </script>
+        <script>
+            function cookieClickHandler() {
+                document.querySelector('.koekje-dialog button[type=submit]').click();
+            }
+
+            var cookieModal = document.querySelectorAll('.koekje-dialog input[type=radio]');
+            for (var i = 0; i < cookieModal.length; i++) {
+                var el = cookieModal[i];
+                el.addEventListener('click', cookieClickHandler, false);
+            }
+        </script>
+
+    <img alt="" aria-hidden="true" height="1" src="https://www.t-mobile.nl/Code/WebPortals/Platform/PublicWeb/Framework/UI/SsoKeepAlive.aspx" style="display:none;visibility:hidden" width="1">
+    
+
+
+
+</body></html>
